@@ -1,0 +1,17 @@
+{
+  "name": "vuejs",
+  "homepage": "https://github.com/ar012/vuejs",
+  "authors": [
+    "Abdur Razzak <abdur.razzak@ctrends-software.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

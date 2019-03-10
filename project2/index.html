@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue</title>
+
+  <script src="../bower_components/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <div id="demo"></div>
+
+  <div id="app" v-once>
+    <h1 v-bind:style="{ color: headColor, fontSize: headFont+'px', border: '2px solid red' }">{{ title }}</h1>
+
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+    <!-- <p v-text="appName">mysite</p> -->
+    <p> {{ appName }}</p>
+    <p v-text="appName"></p>
+    <p v-once> {{ appName }} </p>
+    <p v-text="appName" v-once></p>
+
+    <h3>{{ brandName }}</h3>
+    <h3 v-text="brandName"></h3>
+    <h3 v-html="brandName"></h3>
+
+    <h4 v-bind:id="myId">Good By</h4>
+
+    <button v-bind:disabled="isDisabled">Bind</button>
+
+    <h2 v-bind:style="objectStyle">Object Style</h2>
+  </div>
+
+
+ 
+<!-- 
+  <div id="app">
+    <h1>{{{ appName }}}</h1>
+    <h1 v-text="appName"></h1>
+    <h1></h1>
+    <h1></h1>
+  </div> -->
+
+
+  <script>
+    var vm = new Vue({
+    el: '#app',
+    data: {
+      title: 'Learning',
+      message: 'Welcome to Vue',
+      appName: 'Selftics',
+      brandName: '<b>Khamaru</b>',
+      myId: 'dataId',
+      isDisabled: true,
+
+      headColor: 'orange',
+      headFont: 50,
+
+      objectStyle: {
+        color: 'green',
+        border: '3px solid yellow',
+        padding: '5px',
+        background: "#ddd"
+      }
+      
+    }
+  })
+
+vm.appName = "New Name";
+
+//   vm.title = 'Hello';
+
+//   var obj = {
+//     name: "AR",
+//     skill: 'Math'
+//   }
+
+// document.getElementById('demo').innerHTML = "Name: " + obj.name + ", Skill: " + obj.skill;
+
+  </script>
+
+
+  <!-- <script src="../bower_components/vue/dist/vue.js"></script> -->
+</body>
+
+</html>
