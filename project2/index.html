@@ -34,11 +34,19 @@
     <button v-bind:disabled="isDisabled">Bind</button>
 
     <h2 v-bind:style="objectStyle">Object Style</h2>
+
   </div>
 
 
- 
-<!-- 
+  <div id="app2">
+    <h3 v-bind:style="[baseStyleObj, successStyleObj]">Success Style </h3>
+    
+    <h3 v-bind:style="[baseStyleObj, dangerStyleObj]">Success Style </h3>
+  </div>
+
+
+
+  <!-- 
   <div id="app">
     <h1>{{{ appName }}}</h1>
     <h1 v-text="appName"></h1>
@@ -49,39 +57,62 @@
 
   <script>
     var vm = new Vue({
-    el: '#app',
-    data: {
-      title: 'Learning',
-      message: 'Welcome to Vue',
-      appName: 'Selftics',
-      brandName: '<b>Khamaru</b>',
-      myId: 'dataId',
-      isDisabled: true,
+      el: '#app',
+      data: {
+        title: 'Learning',
+        message: 'Welcome to Vue',
+        appName: 'Selftics',
+        brandName: '<b>Khamaru</b>',
+        myId: 'dataId',
+        isDisabled: true,
 
-      headColor: 'orange',
-      headFont: 50,
+        headColor: 'orange',
+        headFont: 50,
 
-      objectStyle: {
-        color: 'green',
-        border: '3px solid yellow',
-        padding: '5px',
-        background: "#ddd"
+        objectStyle: {
+          color: 'green',
+          border: '3px solid yellow',
+          padding: '5px',
+          background: "#ddd"
+        }
+
       }
-      
-    }
-  })
+    })
 
-vm.appName = "New Name";
+    vm.appName = "New Name";
 
-//   vm.title = 'Hello';
+    //   vm.title = 'Hello';
 
-//   var obj = {
-//     name: "AR",
-//     skill: 'Math'
-//   }
+    //   var obj = {
+    //     name: "AR",
+    //     skill: 'Math'
+    //   }
 
-// document.getElementById('demo').innerHTML = "Name: " + obj.name + ", Skill: " + obj.skill;
+    // document.getElementById('demo').innerHTML = "Name: " + obj.name + ", Skill: " + obj.skill;
 
+
+
+
+    var vm2 = new Vue({
+      el: '#app2',
+      data: {
+        baseStyleObj: {
+          color: 'red',
+          fontSize: '40px',
+          padding: '5px'
+        },
+        successStyleObj: {
+          background: "#ccc",
+          border: "1px solid green",
+          padding: "10px"
+        },
+        dangerStyleObj: {
+          color: "darked",
+          background: "yellow",
+          border: "1px solid blue"
+        }
+      }
+    })
   </script>
 
 
