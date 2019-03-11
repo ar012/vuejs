@@ -1,0 +1,8 @@
+Vue Instace
+data property
+Binding Text
+One Time Binding
+Binding HTML 
+Binding to Attributes
+Binding Inline Style with Object Syntax
+Binding Inline Style with Array Syntax
