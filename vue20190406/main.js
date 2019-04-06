@@ -26,6 +26,8 @@ var app = new Vue({
     ],
 
     sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL']
+
+    
   }
  
 });
